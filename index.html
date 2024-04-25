@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>blogpost</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=7s">1) Introductory notes</a></h1>
+
+<p>Yann-Aël Le Borgne, scientific collaborator at the Machine Learning Group at Université Libre de Bruxelles, presents an introduction to deep learning. </p>
+
+<p>The audience has varying levels of familiarity with neural networks, from perceptrons to more advanced architectures like convolutional neural networks and transformers.</p>
+
+<p><img src="00067.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=7s">Link to video</a></p>
+
+<p>The lecture aims to provide an overview of deep learning concepts without being redundant with the audience&#39;s existing knowledge.</p>
+
+<h1 id="toc_1"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=55s">2) Outline of the lecture</a></h1>
+
+<p>Deep learning has become a trendy and highly useful field in the last decade, producing amazing results across various domains. However, it&#39;s important to put this progress into perspective by understanding the long history of research on neural networks that dates back to the 1950s.</p>
+
+<h2 id="toc_2">Perceptron and Multi-Layer Perceptron</h2>
+
+<p>The fundamental building blocks of neural networks are the perceptron and multi-layer perceptron (MLP) architectures. These classic models laid the groundwork for more advanced deep learning techniques.</p>
+
+<p><img src="00175.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=55s">Link to video</a></p>
+
+<h2 id="toc_3">Transformer Networks</h2>
+
+<p>In recent years, transformer networks have emerged as a powerful architecture capable of analyzing not only text, but also images, sounds, and other types of variables. Some key aspects of transformers include:</p>
+
+<ul>
+<li><p>Self-attention mechanisms</p></li>
+<li><p>Ability to process sequential data</p></li>
+<li><p>Applicability across multiple modalities</p></li>
+</ul>
+
+<h2 id="toc_4">Training Data and Parallelization</h2>
+
+<p>The success of deep learning models heavily relies on the quality and quantity of training data. Techniques for parallelizing computation have also been crucial in enabling the training of large-scale models.</p>
+
+<p>Additionally, various toolboxes and frameworks have been developed to facilitate the programming and deployment of neural networks.</p>
+
+<h1 id="toc_5"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=142s">3) Deep Learning vs Neural Networks: What Changed?</a></h1>
+
+<p>Deep learning systems are neural networks (the terms are often used interchangeably), but what has changed over time?</p>
+
+<p><img src="00262.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=202s">Link to video</a></p>
+
+<p>The Google Trends chart above compares interest in &quot;neural networks&quot; (blue) vs &quot;deep learning&quot; (red) over time. Some key observations:</p>
+
+<ul>
+<li><p>Neural networks as a research area started declining in the early 2000s. Around 2004, working on neural nets was not seen as a promising path to publishable research. Other machine learning approaches like statistical methods, computational intelligence, and random forests were more in vogue.</p></li>
+<li><p>This continued until around 2010, when deep learning emerged as a rebranding of neural networks. </p></li>
+<li><p>In 2012, deep learning started producing very useful results, causing the dramatic uptick in interest.</p></li>
+</ul>
+
+<p>So what changed to make deep learning so much more effective compared to the neural networks of the past? A few key factors:</p>
+
+<ul>
+<li><p><strong>More data</strong>: Since the 2000s, the growth of the internet and social networks has made huge amounts of data available that weren&#39;t accessible before. Neural networks need a lot of data to train on.</p></li>
+<li><p><strong>More computing power</strong>: GPUs (graphics processing units) have enabled much faster computations. Originally designed for gaming in 2004 to rapidly perform mathematical operations on images (matrix multiplications), GPUs are perfectly suited for deep learning which relies heavily on matrix math. Using a GPU can speed up training by a factor of 30x compared to a CPU. </p></li>
+<li><p><strong>Better software</strong>: Deep learning libraries like TensorFlow, PyTorch and Keras have made it much easier to design and train neural networks with just a few lines of code. Previously, networks had to be programmed from scratch in C++ which was very time-consuming and difficult.</p></li>
+</ul>
+
+<p>So while the core algorithms haven&#39;t changed much, the dramatic increase in data, computing power, and software tooling has enabled deep learning to become far more practical and powerful in recent years compared to the earlier era of neural networks research.</p>
+
+<h1 id="toc_6"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=406s">4) The Rise of Deep Learning in Image Classification</a></h1>
+
+<p>In the early 2010s, deep learning techniques began to outperform traditional methods in image classification tasks. This was exemplified by the ImageNet Large Scale Visual Recognition Challenge (ILSVRC), a competition involving classifying 1 million images into 1,000 categories.</p>
+
+<h2 id="toc_7">ImageNet Performance Over Time</h2>
+
+<p><img src="00586.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=526s">Link to video</a></p>
+
+<p>The graph above shows the performance of various techniques on the ImageNet challenge over time. In 2010 and 2011, the best accuracies were around 70% using methods like SVM or random forests. </p>
+
+<p>However, in 2012 there was a major breakthrough. A team achieved over 80% accuracy, a huge leap of 10 percentage points, by focusing their efforts on neural network architectures. This was a surprising and impressive result that had to be carefully verified.</p>
+
+<p>The following year in 2013, nearly all teams switched to using deep learning approaches. This represented a seismic shift in the computer vision research community, with many researchers having to pivot from years of work on traditional methods to focus on deep learning.</p>
+
+<h2 id="toc_8">What Enabled the Rise of Deep Learning?</h2>
+
+<p>Two key factors allowed deep learning to achieve such impressive results:</p>
+
+<ol>
+<li><p>Increased computational power: Over a 25 year period from 2000 to 2025, the floating point operations per second (FLOPS) available increased by a factor of 1 million. </p></li>
+<li><p>Larger datasets: Dataset sizes grew exponentially over a 20 year period. Techniques like deep learning are able to effectively leverage large amounts of training data.</p></li>
+</ol>
+
+<p><img src="00706.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=646s">Link to video</a></p>
+
+<p>The combination of more powerful hardware and larger datasets allowed deep learning models with millions of parameters to be effectively trained, leading to their impressive performance on challenging benchmarks like ImageNet. This ushered in a new era of neural networks and deep learning dominating the field of computer vision.</p>
+
+<h1 id="toc_9"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=656s">5) Transformers and Recent Advances in AI</a></h1>
+
+<h2 id="toc_10">Landmark Achievements in AI since 2012</h2>
+
+<p><img src="01076.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1016s">Link to video</a></p>
+
+<p>Over the past decade, there have been several significant milestones in the field of artificial intelligence:</p>
+
+<ul>
+<li><p>2012: AlexNet, a convolutional neural network, won the ImageNet competition and sparked renewed interest in deep learning.</p></li>
+<li><p>2014: Generative Adversarial Networks (GANs) were introduced, enabling the creation of realistic generated images.</p></li>
+<li><p>2016: AlphaGo, powered by convolutional neural networks, defeated the world champion in the complex game of Go.</p></li>
+<li><p>2017: The Transformer architecture was introduced in the seminal &quot;Attention is All You Need&quot; paper.</p></li>
+<li><p>2018: GPT (Generative Pre-trained Transformer) was released, marking the beginning of the GPT series of language models.</p></li>
+<li><p>2020: GPT-3 and DALL-E demonstrated impressive capabilities in text and image generation, respectively.</p></li>
+<li><p>2021: AlphaFold achieved remarkable success in predicting protein structures from amino acid sequences, a complex problem in biology with significant implications for medicine and disease understanding.</p></li>
+</ul>
+
+<h2 id="toc_11">The Exponential Growth of Language Models</h2>
+
+<p>Language models have experienced tremendous growth in terms of parameter count over the past few years:</p>
+
+<ul>
+<li><p>2020: GPT-1 had around 100 million parameters</p></li>
+<li><p>2022: GPT-3 had approximately 175 billion parameters</p></li>
+<li><p>2023 (estimated): GPT-4 is believed to have close to 1 trillion parameters</p></li>
+</ul>
+
+<p>This rapid increase in model size has led to significant improvements in performance and capabilities.</p>
+
+<p><img src="01196.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1136s">Link to video</a></p>
+
+<p>The diagram above provides a more detailed look at the Transformer architecture, highlighting the attention mechanisms and feed-forward layers that enable these models to effectively process and generate sequential data.</p>
+
+<h1 id="toc_12"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=1140s">6) Basic Computing Unit: The Perceptron</a></h1>
+
+<p>The most basic unit in a neural network is the perceptron, which is inspired by the biological neuron. A biological neuron receives information from inputs called dendrites, and if there is enough input, it discharges an electric signal into its axon, which can be represented as an output.</p>
+
+<h2 id="toc_13">Perceptron Model</h2>
+
+<p>A simplified representation of a biological neuron is the perceptron model:</p>
+
+<ul>
+<li><p>It has \(s\) inputs, denoted as a vector \((x_1, x_2, ..., x_s)\)</p></li>
+<li><p>It has \(s\) weights \((w_1, w_2, ..., w_s)\) </p></li>
+<li><p>The output is computed as the scalar product of the input \(\mathbf{x}\) and weight \(\mathbf{w}\) vectors</p></li>
+<li><p>An activation function \(f\) is applied to the scalar product to determine the final output</p></li>
+</ul>
+
+<p><img src="01260.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1260s">Link to video</a></p>
+
+<p>The simplest activation function is the unit step function, which outputs 1 if the scalar product is greater than 0, and 0 otherwise. This allows the perceptron to act as a linear separator.</p>
+
+<h2 id="toc_14">Activation Functions</h2>
+
+<p>While the unit step function is simple, differentiable activation functions are preferred for mathematical reasons, as they allow computation of derivatives to modify weights during training. Common differentiable activation functions include:</p>
+
+<ul>
+<li><p>Logistic function (tanh): Output ranges from -1 to 1</p></li>
+<li><p>Rectified Linear Unit (ReLU): \(f(x) = \max(0, x)\)</p></li>
+</ul>
+
+<p><img src="01380.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1320s">Link to video</a></p>
+
+<p>ReLU is often preferred as its derivative is 1 for positive inputs, allowing for faster learning compared to logistic functions whose derivatives approach 0 away from 0.</p>
+
+<h2 id="toc_15">Training: Gradient Descent</h2>
+
+<p>To train a neural network, a training set \(D_N\) of \(N\) examples is used, where each example is an input-output pair \((x_i, y_i)\). A loss function \(J(w, x, y)\), commonly squared loss, measures how well the algorithm predicts the output \(y_i\) given input \(x_i\).</p>
+
+<p>The weights are updated via gradient descent to minimize the loss function:</p>
+
+<p><img src="01500.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1500s">Link to video</a></p>
+
+<ul>
+<li><p>Forward pass: Compute output for an input \(x_i\)</p></li>
+<li><p>Backward pass: Compute gradient \(\nabla_w J(w, x_i, y_i)\) and update weights in the direction of the negative gradient</p></li>
+<li><p>Repeat for all examples in \(D_N\)</p></li>
+<li><p>The learning rate \(\alpha\) controls the size of the weight updates</p></li>
+</ul>
+
+<p>The choice of learning rate is important - too small and training is slow, too large and it becomes unstable. More advanced optimization techniques like Adam are commonly used to adaptively adjust the learning rate during training.</p>
+
+<h1 id="toc_16"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=1618s">7) Multilayer Perceptron</a></h1>
+
+<p>A multilayer perceptron (MLP) is an extension of the basic perceptron model, allowing for more complex network architectures and improved learning capabilities.</p>
+
+<h2 id="toc_17">Fully Connected Layers</h2>
+
+<p>In an MLP, neurons are organized into multiple layers, with each neuron in one layer connected to all neurons in the adjacent layers. This architecture is known as a fully connected layer.</p>
+
+<p><img src="01738.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1678s">Link to video</a></p>
+
+<p>The connections between layers are represented by weight matrices, where each element corresponds to the weight of the connection between two neurons. The output of each layer is computed by performing a matrix multiplication of the previous layer&#39;s outputs and the weight matrix, followed by the application of an activation function.</p>
+
+<h2 id="toc_18">Forward and Backward Pass</h2>
+
+<p>Training an MLP involves two main steps: the forward pass and the backward pass.</p>
+
+<p><img src="01798.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1738s">Link to video</a></p>
+
+<ul>
+<li><p><strong>Forward pass</strong>: The input is propagated through the network, computing the outputs of each layer until the final output is obtained.</p></li>
+<li><p><strong>Backward pass</strong>: The gradient of the loss function with respect to the weights is computed using backpropagation. The weights are then updated using an optimization algorithm, such as gradient descent, to minimize the loss.</p></li>
+</ul>
+
+<p>The process is repeated for multiple iterations until the network converges to a satisfactory solution.</p>
+
+<h2 id="toc_19">Separating Complex Patterns</h2>
+
+<p>MLPs are capable of learning complex patterns and separating non-linearly separable classes. By combining multiple layers of neurons, an MLP can partition the input space into regions that correspond to different classes.</p>
+
+<p><img src="02038.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=1978s">Link to video</a></p>
+
+<p>In the example shown, a single hidden layer with three neurons is sufficient to separate the two classes. Each neuron in the hidden layer represents a plane in the input space, and the combination of these planes creates a decision boundary that separates the classes.</p>
+
+<p>The activation function used in the hidden layer, such as the hyperbolic tangent (tanh), introduces non-linearity and allows for the formation of smooth decision boundaries.</p>
+
+<h2 id="toc_20">Conclusion</h2>
+
+<p>Multilayer perceptrons are powerful models that can learn complex patterns and solve non-linearly separable problems. By organizing neurons into multiple layers and using appropriate activation functions, MLPs can partition the input space and create decision boundaries that effectively separate different classes.</p>
+
+<h1 id="toc_21"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=2015s">8) Deep Networks and Gradient Vanishing/Exploding Issues</a></h1>
+
+<p>Deep neural networks are powerful models that can learn complex representations from data. They consist of multiple layers of interconnected neurons, with weights between each layer that are trained using gradient descent.</p>
+
+<p><img src="02315.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=2255s">Link to video</a></p>
+
+<p>The key components of a deep network are:</p>
+
+<ul>
+<li><p>An input layer (X) </p></li>
+<li><p>Layers of &#39;hidden&#39; computing units (&#39;neurons&#39;), parameterised (W)</p></li>
+<li><p>Each layer computes \(a^{(l)} = h^{(l)}(W^{(l-1)} a^{(l-1)})\)</p></li>
+<li><p>An output layer (ŷ)</p></li>
+<li><p>Overall, ŷ=DNN(W,x)</p></li>
+</ul>
+
+<h2 id="toc_22">Gradient Vanishing/Exploding Issues</h2>
+
+<p>One challenge with training deep networks is the gradient vanishing/exploding issue. This arises from the chain rule used during backpropagation to compute gradients:</p>
+
+<p><img src="02195.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=2135s">Link to video</a></p>
+
+<p>The issue is caused by products of derivatives. RELU mitigates this effect since its derivative is 1 if its input is positive (but 0 if input negative - &quot;dead neurons&quot; issue).</p>
+
+<p>Intuitively, as the number of layers increases, the gradients for weights in early layers can quickly vanish to near zero or explode to very large values. This makes it difficult to effectively train the weights in those layers.</p>
+
+<h2 id="toc_23">Generalizing Beyond Fully Connected Layers</h2>
+
+<p>While fully connected layers (dense layers) are commonly used, where each neuron is connected to all neurons in the previous layer, deep networks can generalize beyond this. </p>
+
+<p>The layers can apply other functions beyond matrix multiplication. For example, in image tasks, convolutional layers may apply filters to look for specific patterns like cats in a 2D input image.</p>
+
+<p>So rather than always thinking of neural networks as neurons connected to all previous neurons, it&#39;s better to view the layers as applying some function with trainable weights to transform the input data to an output.</p>
+
+<p>With the right architecture, activation functions, and training techniques, deep neural networks can learn powerful representations to solve complex tasks. But challenges like vanishing/exploding gradients require careful design.</p>
+
+<h1 id="toc_24"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=2378s">9) Word Embeddings, Attention and Transformers</a></h1>
+
+<p>Word embeddings and attention are two important building blocks for Transformers, which can be applied to various types of data but were originally used for text processing.</p>
+
+<p><img src="02438.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=2378s">Link to video</a></p>
+
+<p>Word embeddings allow representing words as dense vectors in a high-dimensional space. This enables capturing semantic relationships between words - words with similar meanings will have vectors that are close together.</p>
+
+<p>Attention is a mechanism that allows the model to focus on the most relevant parts of the input when generating each element of the output. It calculates a weighted sum of the input representations, where the weights indicate the importance of each input element.</p>
+
+<p>Transformers combine these concepts of word embeddings and attention to process sequential data. The attention mechanism allows capturing long-range dependencies in the input sequence. Stacking multiple Transformer layers enables building powerful models for tasks like machine translation, text summarization, and language understanding.</p>
+
+<p>By leveraging word embeddings to represent the input and attention to focus on the most relevant parts at each step, Transformers have achieved state-of-the-art performance on many natural language processing benchmarks. Their architecture is highly parallelizable, allowing efficient training on large datasets.</p>
+
+<h1 id="toc_25"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=2412s">10) Word Embeddings</a></h1>
+
+<p>Word embeddings are a way to represent words as vectors of numbers in a high-dimensional space. This allows the computer to process and understand the semantic meaning of words.</p>
+
+<h2 id="toc_26">One-Hot Encoding</h2>
+
+<p>The most straightforward way to represent words as numbers is using one-hot encoding. In this approach, each word in the vocabulary is represented by a vector of size V (the vocabulary size). For a given word, the corresponding entry in the vector is set to 1, while all other entries are 0.</p>
+
+<p>However, one-hot encoding has two main issues:</p>
+
+<ol>
+<li><p>It does not capture any semantic information, as the encoding is arbitrary.</p></li>
+<li><p>The vectors can become very large for high vocabulary sizes.</p></li>
+</ol>
+
+<h2 id="toc_27">Semantic Word Embeddings</h2>
+
+<p>Ideally, we want word embeddings where each dimension in the vector represents some semantic information. For example, consider a simplified world where everything can be represented by three dimensions: royalty, masculinity, and femininity.</p>
+
+<p><img src="02702.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=2642s">Link to video</a></p>
+
+<p>In this space, the word &quot;king&quot; could be represented by a vector with high values for royalty and masculinity, and a low value for femininity. Similarly, &quot;queen&quot; would have high values for royalty and femininity, and a low value for masculinity.</p>
+
+<p>However, with just these three dimensions, we cannot distinguish between &quot;queen&quot; and &quot;princess&quot;. By adding a fourth dimension for age, we can now represent these four concepts distinctly.</p>
+
+<h2 id="toc_28">Word Arithmetic</h2>
+
+<p>Once words are represented in a semantic embedding space, we can perform arithmetic operations on them. For example, if we subtract &quot;man&quot; from &quot;king&quot;, we are left with the concept of &quot;royalty&quot;. Adding &quot;woman&quot; to this &quot;royalty&quot; vector gives us &quot;queen&quot;.</p>
+
+<h2 id="toc_29">Learning Word Embeddings</h2>
+
+<p><img src="02817.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=2757s">Link to video</a></p>
+
+<p>Word embeddings are typically learned automatically from large corpora of text using neural networks. One popular approach is the skip-gram model, which consists of an input layer, a hidden layer, and an output layer.</p>
+
+<p>The input layer uses one-hot encoding to represent the focus word. The output layer predicts the context words (the words surrounding the focus word). The hidden layer learns a compressed representation of the input, which becomes the word embedding.</p>
+
+<p>For a vocabulary of 50,000 words, an embedding size of a few hundred dimensions is usually sufficient. The neural network is trained on a large text corpus, and the hidden layer weights converge to the semantic word embedding space.</p>
+
+<h2 id="toc_30">Visualizing Word Embeddings</h2>
+
+<p>Here is a demo showing word embeddings trained on a 300-dimensional space:</p>
+
+<p><img src="03162.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=3102s">Link to video</a></p>
+
+<p>We can see that the embeddings capture semantic relationships, such as gender (with words like &quot;father&quot;, &quot;uncle&quot;, &quot;boy&quot; on one side, and &quot;daughter&quot;, &quot;niece&quot;, &quot;girl&quot; on the other) and age.</p>
+
+<p>The tutorial mentions that dimension 126 was found to be highly correlated with gender, with values around -0.03 for women and 0.03 for men.</p>
+
+<p>We can also compute distances between word embeddings to find synonyms or measure the similarity between concepts. Clicking on a word in the demo shows its similarity to all other words.</p>
+
+<p>Word embeddings provide a powerful way to represent and manipulate words based on their meanings, enabling more intelligent natural language processing applications.</p>
+
+<h1 id="toc_31"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=3563s">11) Attention Mechanism in Transformers</a></h1>
+
+<p>The attention mechanism in Transformers allows words to communicate with one another and share information. Rather than just paying attention to other words in a sentence, words give information about themselves that may be useful for other words.</p>
+
+<p>For example, consider the sentences:</p>
+
+<ol>
+<li><p>The bank of the river.</p></li>
+<li><p>Money in the bank.</p></li>
+</ol>
+
+<p><img src="03787.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=3727s">Link to video</a></p>
+
+<p>In the embedding space, the word &quot;bank&quot; would be positioned differently based on the context provided by the other words in the sentence. The attention mechanism allows &quot;bank&quot; to move closer to either &quot;river&quot; or &quot;money&quot; depending on the sentence.</p>
+
+<p><img src="03951.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=3891s">Link to video</a></p>
+
+<h2 id="toc_32">Transformer Architecture</h2>
+
+<p>The main components of the Transformer architecture are:</p>
+
+<ol>
+<li><p>Tokenization: The input sequence of words is transformed into tokens, which are intermediate representations. This helps reduce vocabulary size and capture semantics.</p></li>
+<li><p>Embedding: Tokens are transformed into vector representations in a semantic space.</p></li>
+<li><p>Positional Encoding: Information about the position of each token in the sequence is added.</p></li>
+<li><p>Attention and Feed Forward Layers: The core of the Transformer consists of a sequence of blocks, each containing an attention layer and a feed forward layer.</p></li>
+</ol>
+
+<p><img src="04279.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=4219s">Link to video</a></p>
+
+<p>The attention layer allows words to communicate and share information, while the feed forward layer processes the information in a more abstract way. As you go deeper into the layers, the information becomes more abstract.</p>
+
+<h2 id="toc_33">Attention Computation</h2>
+
+<p>The attention computation can be thought of as a matrix operation:</p>
+
+<div><pre><code class="language-none">
+Attention(X) = Softmax(Q * K^T) * V
+</code></pre></div>
+
+<p>Where:</p>
+
+<ul>
+<li><p><code>X</code> is the input matrix of word embeddings</p></li>
+<li><p><code>Q</code> (query), <code>K</code> (key), and <code>V</code> (value) are learned matrices that transform the input</p></li>
+<li><p><code>*</code> denotes matrix multiplication</p></li>
+<li><p><code>Softmax</code> is the softmax function that normalizes the attention weights</p></li>
+</ul>
+
+<p><img src="05099.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=5039s">Link to video</a></p>
+
+<p>The query matrix represents what each word would like to know about itself given the context. The key matrix represents what words can share about themselves, and the value matrix contains the actual information to be shared.</p>
+
+<h2 id="toc_34">Conclusion</h2>
+
+<p>The attention mechanism in Transformers allows for powerful communication between words in a sequence. By learning to share relevant information, Transformers can capture complex relationships and generate highly coherent output. The architecture, with its sequence of attention and feed forward layers, enables the model to process information at different levels of abstraction.</p>
+
+<h1 id="toc_35"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=5205s">12) Vision Transformers (ViT)</a></h1>
+
+<p>Vision Transformers (ViT) are a type of deep learning architecture used for computer vision tasks. They utilize the Transformer architecture, which was originally developed for natural language processing, and adapt it for visual data.</p>
+
+<p><img src="05265.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=5205s">Link to video</a></p>
+
+<p>The key components of a Vision Transformer include:</p>
+
+<ul>
+<li><p><strong>Patch Embedding</strong>: The input image is divided into patches, and each patch is linearly embedded.</p></li>
+<li><p><strong>Transformer Encoder</strong>: The embedded patches are passed through a standard Transformer encoder, which includes Multi-Head Attention and Feed Forward layers.</p></li>
+<li><p><strong>Classification Head</strong>: The output of the Transformer encoder is used for classification or other downstream tasks.</p></li>
+</ul>
+
+<p>One advantage of Vision Transformers is their ability to capture global context and long-range dependencies in the image, thanks to the self-attention mechanism in the Transformer encoder.</p>
+
+<h1 id="toc_36"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=5337s">13) Generative pretrained transformers</a></h1>
+
+<h2 id="toc_37">Example of Training Mixtures</h2>
+
+<p>Different training mixtures can be used to train Transformers, depending on the specific task and dataset. Here&#39;s an example of various training mixtures and their proportions:</p>
+
+<p><img src="05397.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=5337s">Link to video</a></p>
+
+<p>The mixtures include datasets like OpenWebText, Wikipedia, and The Pile - Github. By combining different datasets and adjusting their proportions, the model can be trained to perform well on a variety of natural language processing tasks.</p>
+
+<h2 id="toc_38">GPT3: Datasets, Model Sizes, Training Times</h2>
+
+<p>GPT3 (Generative Pre-trained Transformer 3) is a large-scale language model developed by OpenAI. It has achieved impressive results on various natural language processing tasks. Here are some details about GPT3:</p>
+
+<ul>
+<li><p>It comes in different model sizes, ranging from 125 million to 175 billion parameters.</p></li>
+<li><p>The training data includes a massive corpus of web pages, books, and articles.</p></li>
+<li><p>Training GPT3 is computationally intensive, requiring thousands of GPU/TPU hours.</p></li>
+</ul>
+
+<p><img src="05463.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=5403s">Link to video</a></p>
+
+<p>The table above shows the different model sizes, number of parameters, and training times for GPT3. The largest model, GPT3 175B, has 175 billion parameters. </p>
+
+<h2 id="toc_39">From GPT to InstructGPT (Reinforcement Learning with Human Feedback)</h2>
+
+<p>To create InstructGPT, a more aligned and instruction-following model, OpenAI employed a technique called Reinforcement Learning with Human Feedback (RLHF). The key steps in this process are:</p>
+
+<ol>
+<li><p><strong>Supervised Fine-Tuning (SFT) Stage</strong>: The base GPT model is fine-tuned on a dataset of high-quality instructions and corresponding outputs. This helps the model learn to follow instructions and generate appropriate responses.</p></li>
+<li><p><strong>Reward Model (RM) Construction</strong>: A reward model is trained to predict the quality and helpfulness of the model&#39;s outputs based on human preferences and ratings. This model is used to guide the reinforcement learning process.</p></li>
+<li><p><strong>Reinforcement Learning (RL) Stage</strong>: The fine-tuned model is further trained using reinforcement learning, where it receives rewards based on the reward model&#39;s predictions. This encourages the model to generate outputs that align with human preferences and instructions.</p></li>
+</ol>
+
+<p><img src="05595.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=5535s">Link to video</a></p>
+
+<p>By combining supervised fine-tuning and reinforcement learning with human feedback, InstructGPT is able to better understand and follow instructions while producing more coherent and helpful responses compared to the base GPT model.</p>
+
+<h1 id="toc_40"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=5868s">14) Open Source Resources for AI Models</a></h1>
+
+<p><img src="05988.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=5928s">Link to video</a></p>
+
+<p>Hugging Face is the reference website for finding open source AI models, datasets, and example code. Over the past year, there has been an explosion in the usage of the site, with the number of models increasing from around 40-50,000 to over 600,000 today.</p>
+
+<h2 id="toc_41">Navigating Hugging Face</h2>
+
+<p>The Hugging Face website allows you to search and filter through the vast collection of models. You can narrow down your search based on the type of learning architecture, such as natural language generation for models like ChatGPT. This can help reduce the number of potential models to consider.</p>
+
+<p><img src="06108.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6048s">Link to video</a></p>
+
+<h2 id="toc_42">Llama and the Importance of Model Size</h2>
+
+<p>Recently, Meta open-sourced the Llama model, which marks an important step in terms of model size. The number after a model name typically indicates the number of parameters. For example, an 8 billion parameter model requires around 16 GB of RAM to run (each parameter in the model is encoded with two bytes - as a &#39;float16&#39;), which is within the capabilities of standard consumer GPUs. This makes these models accessible to a wider range of users.</p>
+
+<h2 id="toc_43">The Shift Towards Data-Centric AI</h2>
+
+<p>While model architecture and hyperparameters are important, the key factor driving advancements in AI systems today is the data used for training. What used to cost $100 million a year ago can now be done for a few hundreds of thousand dollars, thanks to the availability of large datasets. Improving these systems now heavily relies on curating and leveraging high-quality data.</p>
+
+<h2 id="toc_44">Transformers Library</h2>
+
+<p>Hugging Face developed the popular open source Transformers library that integrates with PyTorch and TensorFlow. It makes loading pre-trained models and fine-tuning them on your own data very straightforward.</p>
+
+<p>Here&#39;s a simple code snippet to get started with a model:</p>
+
+<div><pre><code class="language-python">from transformers import pipeline
+classifier = pipeline(&quot;sentiment-analysis&quot;)
+
+result = classifier(&quot;This is a great movie!&quot;)
+print(result)</code></pre></div>
+
+<h2 id="toc_45">Spaces</h2>
+
+<p>Hugging Face Spaces are interactive demos showcasing interesting applications built using their models and datasets. For example:</p>
+
+<p><img src="06304.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6244s">Link to video</a></p>
+
+<h1 id="toc_46"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=6417s">15) Open and closed-soruce models</a></h1>
+
+<p>Large language models have seen a dramatic increase in size over recent years, as shown in this chart:</p>
+
+<p><img src="06597.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6537s">Link to video</a></p>
+
+<p>The colors indicate which companies or organizations have developed these models. While some smaller models are open-source, the largest models tend to be developed by major tech companies who want to maintain the intellectual property. Meta has made efforts to open-source some of their models like the Llama series.</p>
+
+<h2 id="toc_47">Advantages and Disadvantages of Open vs Closed Models</h2>
+
+<p>Open-source and proprietary models each have benefits that should be carefully considered:</p>
+
+<p><img src="06657.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6597s">Link to video</a></p>
+
+<p>Open models allow full control over the data and code, but require managing your own infrastructure which can be challenging to scale. Closed models handle the infrastructure for you, but limit your ability to customize.</p>
+
+<h1 id="toc_48"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=6657s">16) Parallelism</a></h1>
+
+<h2 id="toc_49">Parallelism Approaches for Training Large Models</h2>
+
+<p>Training the largest language models like GPT-3 on a single GPU would take hundreds of years. To make training feasible, computations need to be distributed across many GPUs. There are a few main approaches:</p>
+
+<p><img src="06717.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6657s">Link to video</a></p>
+
+<ul>
+<li><p>Data Parallelism: Split the training data across GPUs</p></li>
+<li><p>Tensor Parallelism: Divide large tensors/matrices across GPUs </p></li>
+<li><p>Pipeline Parallelism: Process model layers sequentially across GPUs to optimize for network latency</p></li>
+</ul>
+
+<h1 id="toc_50"><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&amp;t=6758s">17) Deep Learning Libraries: Keras and PyTorch</a></h1>
+
+<p>The two main deep learning frameworks are TensorFlow, originally from Google, and PyTorch, from Meta (Facebook). Historically TensorFlow was preferred for production deployments in industry while PyTorch was more common for research prototypes. </p>
+
+<p>However, PyTorch has improved its production capabilities and is seeing increasing adoption in industry as well as research. It provides a layer of abstraction over lower-level CUDA operations.</p>
+
+<p><img src="06818.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6758s">Link to video</a></p>
+
+<h2 id="toc_51">Getting Started</h2>
+
+<p>To get started with Keras or PyTorch, check out these resources:</p>
+
+<p><img src="06938.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6878s">Link to video</a></p>
+
+<ul>
+<li><p><a href="https://keras.io/getting_started/intro_to_keras_for_engineers/">Keras getting started guide for engineers</a></p></li>
+<li><p><a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html">PyTorch 60-minute blitz tutorial</a></p></li>
+</ul>
+
+<p>Within an hour, you can have your first neural network trained and understand how the pieces fit together.</p>
+
+<h2 id="toc_52">Deep Learning: Limitations</h2>
+
+<p>While deep learning architectures are powerful, they do have some drawbacks:</p>
+
+<p><img src="06998.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=DeeL4sH9nvI&t=6938s">Link to video</a></p>
+
+<ul>
+<li><p>Lack of theory in designing/training networks</p>
+
+<ul>
+<li>Network structures are mostly empirical, trial and error</li>
+</ul></li>
+<li><p>Interpretability </p>
+
+<ul>
+<li>Hard to interpret how data is processed and what neurons do</li>
+</ul></li>
+<li><p>Computational resources, training times, cost, carbon footprint</p>
+
+<ul>
+<li>Training large networks requires substantial computational resources</li>
+</ul></li>
+</ul>
+
+<p>Deep learning is not always the best approach. For tasks like dealing with tabular data or time series, methods from statistics or other algorithms like gradient boosting or random forests may be more suitable.</p>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
