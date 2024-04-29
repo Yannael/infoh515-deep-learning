@@ -979,3 +979,12 @@ While deep learning architectures are powerful, they do have some drawbacks:
 
 Deep learning is not always the best approach. For tasks like dealing with tabular data or time series, methods from statistics or other algorithms like gradient boosting or random forests may be more suitable.
 
+## Additional references
+
+- Online course: 
+	- [MIT Introduction to deep learning - 2024](http://introtodeeplearning.com/)
+	- [FastAI](https://www.fast.ai/) - Free online course - By Jeremy Howard
+- Youtube channels: 
+	- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy), in particular [Intro to large language models](https://www.youtube.com/watch?v=zjkBMFhNj_g) 
+	- [3Blue1Brown - What is a GPT?](https://www.youtube.com/watch?v=wjZofJX0v4M) - See also the whole series on Neural networks
+- Book: [Dive into Deep Learning](https://d2l.ai/index.html), 2022  
